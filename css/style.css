@@ -31,7 +31,10 @@ a:hover, a:focus{
 
 }
 .intro img{
-  max-width: 250px;
+  max-width: 390px;
+  position: relative;
+  left: 53px;
+  z-index: 1;
 }
 
 .intro .slideInRight{
@@ -40,16 +43,68 @@ a:hover, a:focus{
 }
 .boxes{
   position: relative;
-  top: -100px;
+  height: 200px;
+  -webkit-animation-delay: 1000ms;
 }
 .box{
   width: 20px;
   height: 20px;
-  background: white;
+  background: #8a6d3b;
+  position: relative;
+  top: 148px;
+  -webkit-animation-name: moving-box;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-delay: 2s;
+  -moz-animation-name: moving-box;
+  -moz-animation-duration: 3s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-fill-mode: forwards;
+  -moz-animation-delay: 2s;
+  animation-name: moving-box;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+  visibility: hidden;
+
 }
+
+@-webkit-keyframes moving-box {
+  0% {
+    left: 80px;
+    opacity: 0;
+    visibility: visible;
+  }
+
+  100% {
+    left: -70px;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@-moz-keyframes moving-box {
+  0% {
+    left: 80px;
+    opacity: 0;
+    visibility: visible;
+  }
+
+  100% {
+    left: -70px;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
 .share{
   margin-top: 20px;
   text-align: center;
+}
+.share .btn{
+  box-shadow: 0 16px 46px -16px black;
 }
 
 .content{
