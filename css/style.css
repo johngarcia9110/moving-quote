@@ -1,0 +1,96 @@
+
+html{
+  height: 100%;
+  overflow: auto;
+  background: #a7cfdf; /* Old browsers */
+  background: -moz-linear-gradient(top, #a7cfdf 0%, #23538a 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #a7cfdf 0%,#23538a 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #a7cfdf 0%,#23538a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7cfdf', endColorstr='#23538a',GradientType=0 ); /* IE6-9 */
+
+}
+body{
+  background-color: transparent;
+  height: 100%;
+  overflow: auto;
+}
+.back{
+  background: midnightblue;
+  color: white;
+}
+a:hover, a:focus{
+  color: white;
+}
+
+.container{
+  margin-top: 50px;
+}
+
+.intro{
+  margin: 40px auto;
+
+}
+.intro img{
+  max-width: 250px;
+}
+
+.intro .slideInRight{
+  animation-delay: 1000ms;
+  -webkit-animation-delay: 1000ms;
+}
+.boxes{
+  position: relative;
+  top: -100px;
+}
+.box{
+  width: 20px;
+  height: 20px;
+  background: white;
+}
+.share{
+  margin-top: 20px;
+  text-align: center;
+}
+
+.content{
+  padding: 20px;
+  background-color: midnightblue;
+  color: white;
+  text-align: center;
+
+}
+h1{
+  text-align: center;
+}
+
+.it-moving-form{
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: midnightblue;
+  color: white;
+  text-align: center;
+  box-shadow: 0 40px 60px -20px black;
+}
+
+
+.alert {
+  color: red;
+  display: none;
+}
+form input[type=text], select{
+  color: black;
+}
+
+label{
+  min-height: 42px;
+}
+.form-group{
+  margin-bottom: 0;
+}
+
+#price {
+  color: green;
+  font-weight: bold;
+  font-size: 30px;
+}
