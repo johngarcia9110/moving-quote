@@ -1,18 +1,18 @@
 
-html{
-  height: 100%;
-  overflow: auto;
+body{
+  display: block;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   background: #a7cfdf; /* Old browsers */
   background: -moz-linear-gradient(top, #a7cfdf 0%, #23538a 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(top, #a7cfdf 0%,#23538a 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom, #a7cfdf 0%,#23538a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7cfdf', endColorstr='#23538a',GradientType=0 ); /* IE6-9 */
-
 }
-body{
-  background-color: transparent;
-  height: 100%;
-  overflow: auto;
+.navbar-fixed-top {
+    top: 0;
+    border-width: 0 0 1px;
+    width: 300px;
 }
 .back{
   background: midnightblue;
@@ -33,7 +33,6 @@ a:hover, a:focus{
 .intro img{
   max-width: 390px;
   position: relative;
-  left: 53px;
   z-index: 1;
 }
 
@@ -42,7 +41,9 @@ a:hover, a:focus{
   -webkit-animation-delay: 1000ms;
 }
 .boxes{
-  position: relative;
+  position: absolute;
+  top: 4%;
+  left: 50%;
   height: 200px;
   -webkit-animation-delay: 1000ms;
 }
@@ -148,4 +149,20 @@ label{
   color: green;
   font-weight: bold;
   font-size: 30px;
+}
+#error{
+  color:red;
+}
+
+
+@media only screen and (max-width: 425px) {
+  .intro-img img{
+    max-width: 250px;
+  }
+  .boxes{
+    position: absolute;
+    top: -39px;
+    left: 50%;
+    height: 50px;
+    -webkit-animation-delay: 1000ms;
 }

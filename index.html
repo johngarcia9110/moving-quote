@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
@@ -22,24 +22,20 @@
   </head>
 
   <body>
-
+    <div class="container">
     <nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
-      <a class="navbar-brand back" href="https://adamdtechnology.com/"> << Back To Adam D Technology</a>
+      <a class="navbar-brand back" href="https://adamdtechnology.com/"> << Home</a>
     </nav>
 
-    <div class="container">
+
       <div class="intro col-sm-12 col-lg-6 animated slideInLeft">
         <div class="content">
           <div class="row">
             <div class="intro-img">
-              <div class="col-sm-6">
-                <img class="animated slideInRight" src="/moving/img/van2.png" alt="">
-              </div>
-              <div class="col-sm-6">
+                <img class="" src="/moving/img/van2.png" alt="">
                 <div class="boxes animated fadeIn">
                   <div class="box"></div>
                 </div>
-              </div>
             </div>
         </div>
         <h1>IT Moving Calculator</h1>
@@ -139,12 +135,54 @@
       <h2>PRICE ESTIMATE:</h2><span id="price">$00.00</span>
       <div class="final">
       <div class="more-info">
-        <a class="btn btn-md btn-success" href="#" >Talk To An Advisor</a>
+        <p id="error"></p>
+        <a class="btn btn-md btn-success" data-toggle="modal" data-target="#myModal" >Talk To An Advisor</a>
       </div>
       </div>
     </div>
   </div>
+  <div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
 
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Advisor Contact Request</h4>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <div class="row">
+            <form accept-charset="UTF-8" action="https://lj322.infusionsoft.com/app/form/process/59e622ebbec85226e9a751fa5cb10341" class="infusion-form col-sm-6" method="POST">
+              <input name="inf_form_xid" type="hidden" value="59e622ebbec85226e9a751fa5cb10341" />
+              <input name="inf_form_name" type="hidden" value="Moving Solutions Form" />
+              <input name="infusionsoft_version" type="hidden" value="1.56.0.67" />
+              <input name="inf_field_Email" type="hidden" value="null" />
+              <div class="infusion-field form-group">
+                  <label for="inf_field_FirstName">First Name *</label>
+                  <input class="infusion-field-input-container form-control" id="inf_field_FirstName" name="inf_field_FirstName" type="text" />
+              </div>
+              <br>
+              <div class="infusion-field form-group">
+                  <label for="inf_field_Phone1">Best Number To Reach You: *</label>
+                  <input class="infusion-field-input-container form-control" id="inf_field_Phone1" name="inf_field_Phone1" type="text" />
+              </div>
+              <br>
+              <div class="infusion-submit">
+                  <input class="btn btn-success btn-lg" type="submit" value="Submit" />
+              </div>
+            </form>
+          </div>
+        </div>
+      <script type="text/javascript" src="https://lj322.infusionsoft.com/app/webTracking/getTrackingCode?trackingId=f0372f7b686f615ffb5bf9e91de740bf"></script>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
     </div><!-- /.container -->
 
 

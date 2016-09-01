@@ -34,7 +34,7 @@ document.getElementById("calc").onclick = function(){
 
 //check if the user has tv's to move
   if(tvQ === "No"){
-    console.log("Setting TvQ")
+    //if no tv's to move set num to 0
     var tvNum = 0;
   }else{
     var tvSize = parseInt(document.getElementById('tvSize').value);
@@ -43,18 +43,29 @@ document.getElementById("calc").onclick = function(){
     console.log(tvNum);
   }
 //testing
-  console.log("1: " + computers);
-  console.log( "2: " + monitors);
-  console.log("3: " + basicPrint);
-  console.log("4: " + mfpPrint);
-  console.log("5: " + tvNum);
-  console.log("6: " + miles);
-  console.log("7: " + insurance);
-  console.log("8: " + server);
-  console.log("9: " + hasNetwork);
+  // console.log("1: " + computers);
+  // console.log( "2: " + monitors);
+  // console.log("3: " + basicPrint);
+  // console.log("4: " + mfpPrint);
+  // console.log("5: " + tvNum);
+  // console.log("6: " + miles);
+  // console.log("7: " + insurance);
+  // console.log("8: " + server);
+  // console.log("9: " + hasNetwork);
+var items = [computers, monitors, basicPrint, mfpPrint, tvNum, miles, insurance, server, hasNetwork];
 
-//calc total
-var total = computers + monitors + basicPrint + mfpPrint + tvNum + miles + insurance + server + hasNetwork;
+for(var i = 0; i < items.length; i++){
+  console.log("Variable " + i + ": " + items[i]);
+  if(isNaN(items[i])){
+    document.getElementById("error").innerText = "*Please ensure you input a value for each field. Use the number 0 if you do not plan on moving a particular item.";
+    document.getElementById("price").innerText = "$" + "ERROR";
+    break;
+  }else{
+    //calc total
+    document.getElementById("error").innerText = "";
+    var total = computers + monitors + basicPrint + mfpPrint + tvNum + miles + insurance + server + hasNetwork;
     document.getElementById("price").innerText = "$" + total;
-  //}
+  }
+}
+
 }
